@@ -18,8 +18,8 @@ on:
   
 env:
   CONFIGURATION: release
-  AZ_APP_NAME: ${{ secrets.AZURE_ENVIRONMENT_NAME }}-app
-  AZ_API_NAME: ${{ secrets.AZURE_ENVIRONMENT_NAME }}-api
+  AZ_APP_NAME: devloadtestadia-app
+  AZ_API_NAME: devloadtestadia-api
 
 jobs:
   build:
@@ -91,7 +91,7 @@ jobs:
         with:
           files: app-artifact/appsettings.json
         env:
-          Api.Address: https://${{ env.AZ_API_NAME }}.azurewebsites.net/
+          Api.Address: https://devloadtestadia-api.azurewebsites.net/
           ApplicationInsights.ConnectionString: ${{ secrets.AZURE_CONTOSO_APP_INSIGHTS }}
       
       - name: Azure Login

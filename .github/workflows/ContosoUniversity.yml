@@ -102,11 +102,11 @@ jobs:
       - name: Deploy API
         uses: azure/webapps-deploy@v2.2.3
         with:
-          app-name: ${{ env.AZ_API_NAME }}
+          app-name: devloadtestadia-api
           package: api-artifact
       
       - name: Deploy APP
         uses: azure/webapps-deploy@v2.2.3
         with:
-          app-name: ${{ env.AZ_APP_NAME }}
+          app-name: devloadtestadia-app
           package: app-artifact
